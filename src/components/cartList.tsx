@@ -80,12 +80,58 @@ function CartList(props: any) {
       {Cart.map((val: any, index: any) => {
         return (
           <div key={index}>
-            <Col>
+            {val.qty > 0 ? <>
+              <Col>
+                <Card>
+                  <Card.Body>
+                    <Row>
+                      <Col sm={4}>
+                        <Card.Img
+                          variant="top"
+                          style={{ width: "100%", height: "100%" }}
+                          title={val.fields.title}
+                          src={val.fields.photo}
+                        />
+                      </Col>
+                      <Col sm={8}>
+                        <Col>
+                          <Card.Title>{val.fields.title}</Card.Title>
+                        </Col>
+                        <Row>
+                          <Col sm={6}>
+                            <Card.Title>{val.fields.price} THB/day</Card.Title>
+                          </Col>
+                          <Col>
+                            <Button
+                              size="sm"
+                              variant="primary"
+                              onClick={() => AddOrRemove(val, true)}
+                            >
+                              +
+                            </Button>
+                          </Col>
+                          <Col>{val.qty}</Col>
+                          <Col>
+                            <Button
+                              size="sm"
+                              variant="danger"
+                              onClick={() => AddOrRemove(val, false)}
+                            >
+                              -
+                            </Button>
+                          </Col>
+                        </Row>
+                      </Col>
+                    </Row>
+                  </Card.Body>
+                </Card>
+              </Col>
+            </> : <></>}
+            {/* <Col>
               <Card>
                 <Card.Body>
                   <Row>
                     <Col sm={4}>
-                      {" "}
                       <Card.Img
                         variant="top"
                         style={{ width: "100%", height: "100%" }}
@@ -125,7 +171,7 @@ function CartList(props: any) {
                   </Row>
                 </Card.Body>
               </Card>
-            </Col>
+            </Col> */}
           </div>
         );
       })}
