@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Row, Col, Button, Card } from "react-bootstrap";
 import axios from "axios";
 
 function CarList(props: any) {
-  const { Car, setCar, Cart, setCart } = props;
+  const [Car, setCar] = useState<any>([]);
+  const { Cart, setCart } = props;
   useEffect(() => {
     GetCarList();
   }, []);

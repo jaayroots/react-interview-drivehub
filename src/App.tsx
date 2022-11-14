@@ -9,7 +9,7 @@ import CartList from "./components/cartList";
 import "./App.css";
 
 function App() {
-  const [Car, setCar] = useState<any>([]);
+  // const [Car, setCar] = useState<any>([]);
   const [Cart, setCart] = useState<any>([]);
 
   return (
@@ -28,8 +28,6 @@ function App() {
           <Row>
             <Col md={6}>
               <CarList
-                Car={Car}
-                setCar={setCar}
                 Cart={Cart}
                 setCart={setCart}
               />

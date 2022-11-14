@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col, Button, Card, Form, InputGroup } from "react-bootstrap";
+import { Row, Col, Button, Card, Form } from "react-bootstrap";
 import axios from "axios";
 
 function CartList(props: any) {
