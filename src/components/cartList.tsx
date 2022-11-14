@@ -173,7 +173,6 @@ function CartList(props: any) {
           </Row>
         </Card.Body>
       </Card>
-      <Col style={{ padding: 50 }}></Col>
     </>
   );
 }

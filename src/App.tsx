@@ -9,9 +9,7 @@ import CartList from "./components/cartList";
 import "./App.css";
 
 function App() {
-  // const [Car, setCar] = useState<any>([]);
   const [Cart, setCart] = useState<any>([]);
-
   return (
     <div>
       <div className="app-header">
@@ -36,6 +34,8 @@ function App() {
               <CartList Cart={Cart} setCart={setCart} />
             </Col>
           </Row>
+          <Col style={{ padding: 60 }}>
+      </Col>
         </Container>
       </div>
       <div className="app-footer">FOOTER</div>
