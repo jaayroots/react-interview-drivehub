@@ -46,7 +46,7 @@ function CarList(props: any) {
       </Row>
       {Car.map((val: any, index: any) => {
         return (
-          <Col>
+          <Col key={index}>
             <Card>
               <Card.Body>
                 <Card.Title>{val.fields.title}</Card.Title>
